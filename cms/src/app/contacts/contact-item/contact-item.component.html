@@ -1,0 +1,8 @@
+<a href="#" class="list-group-item clearfix" (click)="onSelected()">
+    <div class="pull-left">
+        <p class="list-group-item-text">Bro. {{ contact.name.substring(contact.name.lastIndexOf(' '), contact.name.length) }}</p>
+    </div>
+    <span class="pull-right">
+        <img [src]="contact.imageUrl" alt="{{ contact.name }}" class="img-responsive" style="max-height: 50px;">
+    </span>
+</a>
