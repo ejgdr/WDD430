@@ -1,8 +1,8 @@
-<a href="#" class="list-group-item clearfix" (click)="onSelected()">
+<a href="#" class="list-group-item clearfix">
     <div class="pull-left">
-        <p class="list-group-item-text">Bro. {{ contact.name.substring(contact.name.lastIndexOf(' '), contact.name.length) }}</p>
+        <p class="list-group-item-text">{{ contact?.name }}</p>
     </div>
     <span class="pull-right">
-        <img [src]="contact.imageUrl" alt="{{ contact.name }}" class="img-responsive" style="max-height: 50px;">
+        <img [src]="contact?.imageUrl" alt="{{ contact?.name }}" class="img-responsive" style="max-height: 50px;" *ngIf="contact?.imageUrl">
     </span>
 </a>
