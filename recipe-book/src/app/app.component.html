@@ -1,9 +1,13 @@
-<app-header (featureSelected)="onNavigate($event)"></app-header>
+<!--We took out our @Output from the header.component as well -->
+<!-- <app-header (featureSelected)="onNavigate($event)"></app-header> -->
+<app-header></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
-      <app-shopping-list *ngIf="loadedFeature !== 'recipe'"></app-shopping-list>
+      <!--Now the approach to go to navigate, better use the app-routing.module-->
+      <!-- <app-recipes *ngIf="loadedFeature === 'recipe'"></app-recipes>
+      <app-shopping-list *ngIf="loadedFeature !== 'recipe'"></app-shopping-list> -->
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

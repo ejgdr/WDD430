@@ -1,4 +1,6 @@
-<a href="#" class="list-group-item clearfix" (click)="onSelected()">
+<!-- we take out our href so we don't reload the page again and we add a style to help us change the pointer of the mouse
+we also remove the click event for the child component we created after-->
+<a style="cursor: pointer;" [routerLink]="[index]" routerLinkActive="active" class="list-group-item clearfix">
     <div class="pull-left">
         <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
         <p class="list-group-item-text">{{ recipe.description }}</p>
