@@ -18,6 +18,13 @@
             <div class="panel-body">
                 <div class="list-group-item-heading">Email: {{ contact?.email }}</div>
                 <div class="list-group-item-heading">Phone: {{ contact?.phone }}</div>
+                <div class="list-group-item-heading">Contacts in Team:</div>
+                <div *ngFor="let contact of groupContacts; let i = index">
+                    <div>
+                      <cms-contact-item class="col-sm-11" [contact]="contact"></cms-contact-item>
+                    </div>
+                </div>
+                <!-- <div class="list-group-item-heading groupDiv col-sm-11" *ngFor="let contact of contact?.group">{{contact.name}} {{contact.imageUrl}}</div> -->
             </div>
         </div>       
     </div>

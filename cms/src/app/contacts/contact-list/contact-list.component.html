@@ -6,7 +6,9 @@
                 <a class="btn btn-success pull-right" [routerLink]="['new']">New Contact</a>
             </div>
             <div class="panel-body">
-                <cms-contact-item *ngFor="let contact of contacts" [contact]="contact"></cms-contact-item>
+                <cms-contact-item *ngFor="let contact of contacts" [contact]="contact"
+                                  dnd-draggable [dragEnabled]="true" [dragData]="contact" [dropZones]="['contactGroup']">
+                </cms-contact-item>
             </div>
         </div>       
     </div>
