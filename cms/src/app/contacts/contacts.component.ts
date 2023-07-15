@@ -12,10 +12,10 @@ export class ContactsComponent {
 
   constructor(private contactService: ContactService) {}
 
-  ngOnInit() {
-    this.contactService.contactSelectedEvent.subscribe(
-      (contact: Contact) => {this.selectedContact = contact}
-    );
-  }
+  // ngOnInit() {
+  //   this.contactService.contactSelectedEvent.subscribe(
+  //     (contact: Contact) => {this.selectedContact = contact}
+  //   );
+  // }
 
 }

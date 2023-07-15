@@ -8,7 +8,7 @@
                   </div>
                   <div class="row">
                     <div class="input-group pull-left pad-left-right col-xs-7">
-                      <input type="text" #searchBox placeholder="Enter a search value">
+                      <input type="text" #searchBox class="form-control" placeholder="Enter a search value">
                       <div class="glyphicon glyphicon-search input-group-addon" (click)="search(searchBox.value)"></div>
                     </div>
                     <div class="pull-right pad-left-right">
@@ -17,7 +17,7 @@
                   </div>
                 </div>
             <div class="panel-body">
-                <cms-contact-item *ngFor="let contact of contacts | contactsFilter: term" [contact]="contact"
+                <cms-contact-item *ngFor="let contact of contacts | contactsFilter:term" [contact]="contact"
                                   dnd-draggable [dragEnabled]="true" [dragData]="contact" [dropZones]="['contactGroup']">
                 </cms-contact-item>
             </div>

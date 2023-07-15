@@ -12,7 +12,7 @@ export class ContactDetailComponent implements OnInit{
   contact: Contact;
   groupContacts: Contact[] = [];
   id: string;
-  group: [];
+  // group: [];
 
   constructor(private contactService: ContactService,
               private route: ActivatedRoute,
@@ -22,10 +22,11 @@ export class ContactDetailComponent implements OnInit{
     this.route.params.subscribe(
       (params: Params) => {
         this.id = params['id'];
-        this.contact = this.contactService.getContact(this.id);
-        this.groupContacts = this.contact.group;
-      }
-    );
+        this.contactService.getContact(this.id).subscribe(
+          contactData => {
+            this.contact = contactData.contact;
+          });
+      });
   }
 
   onDelete() {
