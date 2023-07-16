@@ -1,0 +1,16 @@
+<div class="col-md-4">
+    <div class="thumbnail">
+      <div *ngFor="let wizard of wizards$ | async">
+        <img [src]="wizard.image" alt="{{wizard.name}}" class="img-responsive" style="max-height: 50px;">
+        <div class="caption">
+          <h3>{{wizard.name}}</h3>
+          <p>Date of Birth: {{wizard.dateOfBirth}}</p>
+          <p>House: {{wizard.house}}</p>
+          <div class="row btn-toolbar pull-right margin-left-right">
+            <a [routerLink]="['edit']" class="btn btn-info" >Edit</a>
+            <a class="btn btn-danger">Delete</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
